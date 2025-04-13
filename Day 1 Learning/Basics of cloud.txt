@@ -1,0 +1,36 @@
+What is Cloud?
+Cloud is a network of remote servers used to store, process data, and run applications.
+
+Virtualization
+Virtualization helps solve the problem of resource wastage on a server. It is the process of creating logical isolation over a physical server.
+
+Types of Cloud Network
+
+1. Private Cloud – You or your organization manages and maintains the entire cloud platform.
+
+2. Public Cloud – Cloud providers like Amazon, Microsoft, Google, etc., manage and maintain the entire ecosystem. We can request access to the resources, 
+and all those resources are managed by these cloud providers.
+
+Why Public Cloud?
+
+1. Managing your own private cloud is more costly.
+
+2. There's a maintenance overhead when managing everything yourself.
+
+3. Recommended for startups and mid-scale organizations.
+
+4. Public cloud providers offer a wide range of high-quality services.
+
+Why is AWS popular?
+
+1. It was the first entrant in the cloud platform market.
+
+2. The number of services offered has increased over time.
+
+Disadvantages of Cloud Platforms
+
+1. Cloud repatriation – Moving from the cloud to on-premises data centers (private cloud); very few organizations do this.
+
+2. Due to the cost of cloud platforms.
+
+3. Security concerns.
