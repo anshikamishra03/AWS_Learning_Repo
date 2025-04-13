@@ -1,0 +1,30 @@
+IAM Service (Identity and Access Management) – IAM is a service on AWS that provides authentication and authorization.
+
+Users / Policies –
+
+1. As a DevOps engineer, when someone joins the organization and requests access to AWS, you will first ask which services they need access to.
+
+2. Then, you will create a user for that person (e.g., xyz) and attach policies that define what actions they are allowed to perform on specific services.
+
+1. Users – Used for authentication (verifying identity).
+
+2. Policies – Used for authorization (defining what actions are allowed).
+
+User Groups –
+
+1. Groups help solve the problem of managing users and policies efficiently, especially when many people join or leave the organization.
+
+2. They reduce manual work and improve efficiency in assigning access.
+
+3. First, we categorize people in the organization based on their roles and the access they might need on AWS—for example, dev, QA, DB admin, or others.
+
+4. According to the group they belong to, we create a user and place them in the appropriate group.
+
+Roles –
+
+1. A role is a temporary identity that gives permission to someone (a user or a service) to access AWS resources.
+
+2. It is safer than sharing usernames and passwords.
+Example: If an EC2 instance needs to access an S3 bucket, you can assign a role to the EC2 instance that allows it to access S3—this avoids the need to 
+store secret access keys inside your code.
+
