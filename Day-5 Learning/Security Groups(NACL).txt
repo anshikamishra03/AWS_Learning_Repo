@@ -1,0 +1,20 @@
+Security Groups- It serves at instance level. AWS will assign a default Security Groups while creating ec2 instance. Securiy Groups is only for allowing no denial.
+a. Default Security Group- will allow all the outbound traffic except for port 25. Does not allow on port 25 b'coz it is a mailing service and they want any type of spam activity and does not want to record the ip
+address of ec2 instance so it blocks the outbound traffic on port 25 by default.
+b. And aws will deny all the inbound traffic coming into instance.
+
+1. Inbound traffic- Traffic coming into ec2 instance. for ex : User trying to access application inside the ec2 instance.
+2. Outbound traffic- Traffic going out of the ec2 instance. for ex: Application inside ec2 trying to access something outside the ec2 instance.
+
+NACL(Network Access Control List) - It is applied at subnet level.Act as an additional layer of security. We can deny and allow the traffic we want to have access.
+1. Using nacl devops engineer can define there organizations network traffic.
+2. If something is applied at subnet level then it is applied to all the instances within the subnet.
+3. for ex-a. There are 50 ec2 instances inside the subnet so using nacl we can define the nacl configuration to all the ec2 instances.
+          b. Using this we can automate the work of assinging the rules at each ec2 instance instead we can use nacl. 
+
+Practical Implementation
+Using this command python3 -m http.server 8000
+we can use python3 running on port 8080 for this we will create a inbound and outbound traffic rules.
+
+
+
