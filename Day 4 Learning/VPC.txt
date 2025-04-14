@@ -1,0 +1,17 @@
+VPC (Virtual Private Cloud) -
+1. To solve the problem of security breach aws come up with the solution of VPC.
+2. Defining the size of VPC is IP address range.
+3. When Devops Engineer spilts the Ip address range for its multiple projects in small ranges that is called subnet.
+4. Devops engineer will create a gateway. Gate way is a pass that allows someone to enter the VPC.
+5. Public subnet is the one that user access inside the VPC.
+6. Public subnet connect to the user using internet gateway.
+7. From the internet gateway there is a public subnet request goes to the load balancer. Load balancer will create a target group of this application
+8. Route table will be created and tell load balancer to this path so that it can reach subnet.
+9. Security group can block the request or allow according to the ip address is correct or not to access the subnet. 
+10. NACLS-  It is a automation for the security groups instead of defining things again and again we can define as that part as nacls.
+11. NAT Gateway- 1. NAT gateway helps private subnet to download something from internet for that it masks the ip address of the private subnet so that it does not get expose to the external world.
+                 2. It will mask it with the public ip address either of load balancer or router.
+                 3. Using Load balancer it is called SNAT.
+                 4. Using router it is called NAT Gateway.
+12. VPC Flow logs- It records the flow of above process. Sometimes chargeable sometimes not.
+   
