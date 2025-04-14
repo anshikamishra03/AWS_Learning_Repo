@@ -1,0 +1,5 @@
+Route 53- Route53 on aws provides DNS(domain name system) as a service. 
+1. DNS service that maps the domain name with the ip address of load balancer.
+2. Configure Route53 on AWS a. Domain Registration- Purchase the domain names on aws or also from other platforms.
+                            b. If you buy the domain name from others you have to store it in a Hosted zone(Creates the dns records according to there domain names and ip address).
+                            c. Health checks it performs checks of the web servers  to check if they are active or not.
