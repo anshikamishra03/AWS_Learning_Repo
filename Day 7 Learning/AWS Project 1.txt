@@ -1,0 +1,41 @@
+VPC for 2 tier app in private subnet
+VPC with Public-Private subnet in Production
+About Project
+This is a most recommended approach by aws to deploy an applications securely to ec2 instance.
+1. This project demonstrate how to create a VPC and how to secure your applications within A VPC in a Production Enviornment.
+2. To improve resiliency you deploy the servers in two availability Zones by using an auto scaling group and an application load balancer.
+3. For additional Security deploy the servers in private subnets
+4. The servers receive requests through the load balancer.
+5. The servers can connect to the internet by using a NAT gateway.
+6. To improve resiliency you deploy the NAT gateway in both Availability Zones.
+7. Why two Availability Zones - b'coz for some reason if one of the availiabilty zones goes down we still have one availibility zone that is serving the traffic for us 
+   in Production. 
+
+Overview of Project
+1. The VPC has public subnets and private subnets in two availability zones.
+2. Each public subnet contains NAT gateway and a load balancer node.
+3. The servers run in the private subnets are launched and terminated by using an auto scaling group, and receive traffic from the load balancer.
+4. The servers can connect to the internet by using the NAT gateway.
+
+Auto Scaling Group- According to this project example It is concept let's say if we want to deploy on application in two availiability zones instead of creating 
+                    two ec2 instance you can just auto scaling group that create minimum of 2 replicas and in case my application receives more requests and if two
+                    servers are not enough to accept the incoming traffic then auto scaling group immeditaely takes a decision and scale servers according to the
+                    requirement.
+
+Load Balancer- The name itself says it balances the load for ex there are two servers and if have 100 of requets then it will divide between two servers 50/50.
+               if one of the instance is powerful then it will send like 60/40 requests and load balancer eactly balance the load.
+
+Bastion Host and Jump Server- the 2 ec2 istances we have created are in private subnet so we cannot ssh into these instances directly. So we want to keep them secure
+                              we will not craete any public ip address for them but we will create bastion host or just jump host in this public subnet and through
+                              that bastion and jump host can connect to this ec2 instance.(Messanger B/w private and public subnet).
+
+All the commands
+1. use shell command scp(secure copy command)- scp -i C:/Users/anshi/Downloads/aws_login.pem C:/Users/anshi/Downloads/aws_login.pem ubuntu@ipaddressof_bastion_host
+                                               :home/ubuntu
+2. ssh -i aws_login.pem ubuntu@ipaddressof_bastionhost ( used to verify whether pem file is copied to the bastion host or not.
+3. login to private instances- ssh -i aws_login.pem ubuntu@privateipaddress_ofinstance.
+4. vim indesx.html- create a file 
+5. Run the python server- python3 -m https.server 8000
+
+Create a load balancer
+Application Load Balancer-It does the http and https(layer7 Load balancer) It should be public subnet
