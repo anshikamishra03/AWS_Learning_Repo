@@ -26,3 +26,6 @@ AWS CFT(Cloud Formation Template)
 Download VScode plugins to write the cft templates easily
 1. YAML by redhat
 2. AWS Toolkit by aws
+
+Difference between Terraform and CFT?
+1. Terraform is a multi cloud providers CFT is only AWS
