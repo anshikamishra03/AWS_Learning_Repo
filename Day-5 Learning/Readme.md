@@ -36,3 +36,5 @@ For this, we will create inbound and outbound traffic rules in the Security Grou
 
 
 
+
+
